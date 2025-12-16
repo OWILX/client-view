@@ -2,11 +2,13 @@
 @import "navbar.css";
 @import "footer.css";
 .hero {
-  background: linear-gradient(
-    rgba(31,122,77,0.95),
-    rgba(31,122,77,0.95)
-  ),
-  url("../images/hero.jpg") center/cover no-repeat;
+  position: relative;
+  background:
+    linear-gradient(
+      rgba(20, 70, 45, 0.85),
+      rgba(20, 70, 255, 0.85)
+    ),
+    url("../images/hero.jpg") center/cover no-repeat;
 
   color: var(--white);
   min-height: 90vh;
@@ -16,16 +18,73 @@
 
 .hero-content {
   max-width: 700px;
+  padding: 2rem 2rem;
+}
+
+.hero-badge {
+  display: inline-block;
+  background: rgba(255, 215, 0, 0.15);
+  color: var(--gold);
+  padding: 0.4rem 1rem;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  margin-bottom: 1rem;
+  letter-spacing: 0.5px;
+}
+
+.hero h1:not(span) {
+  color: var(--gold);
+  font-size: clamp(2.2rem, 5vw, 3.2rem);
+  line-height: 1.2;
+  margin-bottom: 1rem;
 }
 
 .hero h1 span {
-  color: var(--gold);
+  font-size: 48px;
+  line-height: 0.8;
+  color: var(--white);
+}
+
+.hero p {
+  font-size: 1.1rem;
+  max-width: 600px;
+  opacity: 0.95;
+  color: var(--gray);
 }
 
 .hero-actions {
-  margin-top: 2rem;
+  margin-top: 2.5rem;
   display: flex;
   gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* Button Enhancements */
+.btn {
+  padding: 0.8rem 1.8rem;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background: var(--gold);
+  color: var(--green-dark);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.btn-outline {
+  border: 2px solid var(--white);
+  color: var(--white);
+}
+
+.btn-outline:hover {
+  background: var(--white);
+  color: var(--green-dark);
 }
 .center {
   text-align: center;
