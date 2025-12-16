@@ -1,0 +1,127 @@
+@import "main.css";
+@import "navbar.css";
+@import "footer.css";
+.hero {
+  background: linear-gradient(
+    rgba(31,122,77,0.95),
+    rgba(31,122,77,0.95)
+  ),
+  url("../images/hero.jpg") center/cover no-repeat;
+
+  color: var(--white);
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+}
+
+.hero-content {
+  max-width: 700px;
+}
+
+.hero h1 span {
+  color: var(--gold);
+}
+
+.hero-actions {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1rem;
+}
+.center {
+  text-align: center;
+}
+
+.card {
+  background: var(--white);
+  padding: 2rem;
+  border-radius: var(--radius);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  transition: var(--transition);
+}
+
+.card:hover {
+  transform: translateY(-8px);
+}
+.section-title {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+.section-text {
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.highlight-box {
+  background: var(--gray);
+  padding: 2rem;
+  border-radius: var(--radius);
+}
+
+.check-list li {
+  margin-bottom: 0.8rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.check-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--green);
+  font-weight: bold;
+}
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.link {
+  color: var(--green);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.event-card {
+  position: relative;
+  padding: 2rem;
+  border-radius: var(--radius);
+  border-left: 5px solid var(--gold);
+  background: var(--white);
+}
+
+.event-date {
+  font-weight: 700;
+  color: var(--green);
+}
+
+.stat-box {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.stat {
+  background: var(--white);
+  padding: 2rem;
+  border-radius: var(--radius);
+  text-align: center;
+}
+
+.stat h3 {
+  color: var(--green);
+  font-size: 2rem;
+}
+
+.partners {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  opacity: 0.6;
+}

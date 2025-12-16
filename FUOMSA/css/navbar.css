@@ -1,0 +1,174 @@
+.navbar {
+  background: var(--green);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+}
+
+.nav-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  position: relative; /* Needed for absolute positioning of menu */
+}
+
+.logo a {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--white);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.logo img {
+  height: 40px;
+  width: auto;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.nav-links ul {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a:focus {
+  color: var(--lemon);
+  outline: none;
+}
+
+/* Hide checkbox */
+.nav-toggle-checkbox {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* Hamburger */
+.nav-toggle {
+  display: none;
+  cursor: pointer;
+  padding: 10px 10px;     /* Generous tap area */
+  z-index: 1001;
+  display: flex;          /* Enable gap */
+  flex-direction: column;
+  justify-content: center;
+  gap: 7px;               /* Perfect breathing room between bars */
+}
+
+.nav-toggle span {
+  display: block;
+  width: 32px;
+  height: 4px;
+  margin: 4px;
+  background: var(--white);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Overlay for dimming background when menu open */
+.mobile-menu-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: 999;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%; /* Start off-screen to the right */
+    width: 280px;
+    max-width: 80vw;
+    height: 100vh;
+    background: var(--green);
+    padding: 80px 2rem 2rem;
+    transition: right 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    box-shadow: -4px 0 20px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+  }
+
+  .nav-links ul {
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: flex-start;
+  }
+
+  .nav-links a {
+    display: block;
+    font-size: 1.2rem;
+    padding: 0.75rem 0;
+    width: 100%;
+  }
+
+  .nav-links a.btn-primary, .nav-links a.btn-outline {
+    display: inline-block;
+    width: auto;
+    margin-top: 1rem;
+    padding: 0.75rem 1.5rem;
+  }
+
+  /* When menu is open */
+  .nav-toggle-checkbox:checked ~ .nav-links {
+    right: 0; /* Slide in */
+  }
+
+  .nav-toggle-checkbox:checked ~ .mobile-menu-overlay {
+    display: block;
+    opacity: 1;
+  }
+
+  /* Hamburger to X */
+  .nav-toggle-checkbox:checked + .nav-toggle span:nth-child(1) {
+    transform: rotate(45deg) translate(8px, 8px);
+  }
+
+  .nav-toggle-checkbox:checked + .nav-toggle span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .nav-toggle-checkbox:checked + .nav-toggle span:nth-child(3) {
+    transform: rotate(-45deg) translate(8px, -8px);
+  }
+
+  /* Optional: other mobile rules */
+  .grid-3, .grid-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+  }
+}
