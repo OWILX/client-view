@@ -62,35 +62,6 @@ img {
   border-radius: 20px;
   margin-bottom: 0.5rem;
 }
-.contact-card {
-  background: var(--white);
-  padding: 2rem;
-  border-radius: var(--radius);
-  text-align: center;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-}
-
-.contact-form {
-  max-width: 700px;
-  margin: auto;
-}
-
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  padding: 0.9rem 1rem;
-  margin-bottom: 1rem;
-  border-radius: var(--radius);
-  border: 1px solid #ddd;
-  font-family: inherit;
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus {
-  outline: none;
-  border-color: var(--green);
-}
-
 
 /* Ad Card */
 .ad-card {
