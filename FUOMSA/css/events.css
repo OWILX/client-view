@@ -1,0 +1,38 @@
+@import "about.css";
+.event-box {
+  background: var(--white);
+  padding: 2.5rem;
+  border-radius: var(--radius);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.06);
+  transition: var(--transition);
+}
+
+.event-box:hover {
+  transform: translateY(-6px);
+}
+
+.event-meta {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.event-date-badge {
+  background: var(--gold);
+  color: var(--text-dark);
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.event-type {
+  color: var(--green);
+  font-weight: 600;
+}
+
+.event-actions {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 1rem;
+}
