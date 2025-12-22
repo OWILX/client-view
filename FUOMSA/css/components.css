@@ -6,12 +6,41 @@
 
 .section {
   padding: 5rem 0;
+  position: relative;
+  overflow: hidden;
+
 }
 
 .section-light {
   background: var(--gray);
 }
 
+.section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top right, rgba(0,128,0,0.05), transparent 60%);
+  pointer-events: none;
+}
+
+.section > .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Scroll reveal animation */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: reveal 0.9s ease forwards;
+}
+
+@keyframes reveal {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 .grid {
   display: grid;
   gap: 2rem;

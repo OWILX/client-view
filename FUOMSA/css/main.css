@@ -31,38 +31,6 @@ img {
   max-width: 100%;
   display: block;
 }
-.blog-card {
-  background: var(--white);
-  border-radius: var(--radius);
-  overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-  transition: var(--transition);
-}
-
-.blog-card:hover {
-  transform: translateY(-6px);
-}
-
-.blog-card img {
-  height: 180px;
-  width: 100%;
-  object-fit: cover;
-}
-
-.blog-content {
-  padding: 1.5rem;
-}
-
-.blog-tag {
-  display: inline-block;
-  background: var(--lemon);
-  color: var(--text-dark);
-  padding: 0.3rem 0.7rem;
-  font-size: 0.75rem;
-  border-radius: 20px;
-  margin-bottom: 0.5rem;
-}
-
 /* Ad Card */
 .ad-card {
   background: var(--green);

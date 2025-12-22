@@ -9,14 +9,47 @@
     );
   color: var(--white);
   padding: 4rem 0;
+  position: relative;
+  background-attachment: fixed;
 }
-
+.page-header::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, rgba(255,215,0,0.08), transparent 60%);
+}
 .page-header h1 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
 }
+.page-content {
+  max-width: 700px;
+  padding: 2rem 2rem;
+  animation: fadeHero 1.2s ease forwards;
+}
+@keyframes fadeHero {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.image-box {
+  position: relative;
+}
 .image-box img {
   border-radius: var(--radius);
+  width: 100%;
+  box-shadow: 0 18px 40px rgba(0,0,0,0.12);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.image-box:hover img {
+  transform: scale(1.04);
+  box-shadow: 0 28px 60px rgba(0,0,0,0.18);
 }
 .timeline {
   max-width: 700px;
@@ -28,6 +61,7 @@
 .timeline-item {
   margin-bottom: 2rem;
   position: relative;
+  transition: transform 0.3s ease;
 }
 
 .timeline-item::before {
@@ -40,8 +74,79 @@
   left: -2.6rem;
   top: 0.3rem;
 }
+.timeline-item:hover {
+  transform: translateX(4px);
+}
 
+.timeline-item::after {
+  content: "";
+  position: absolute;
+  left: -2.1rem;
+  top: 0.6rem;
+  width: 0;
+  height: 2px;
+  background: var(--green);
+  transition: width 0.3s ease;
+}
+
+.timeline-item:hover::after {
+  width: 20px;
+}
 .timeline-year {
   font-weight: 700;
   color: var(--green);
+}
+.card {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius);
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, rgba(0,128,0,0.08), transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+
+.card:hover h3 {
+  color: var(--green);
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+.section.center {
+  background: linear-gradient(135deg, #f5faf7, #ffffff);
+}
+
+.section.center .btn {
+  margin: 0.5rem;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.section.center .btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.18);
+}
+.section.center {
+  background: linear-gradient(135deg, #f5faf7, #ffffff);
+}
+
+.section.center .btn {
+  margin: 0.5rem;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.section.center .btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.18);
 }
