@@ -366,3 +366,15 @@
 .blog-card:hover img {
   transform: scale(1.05);
 }
+.president-card {
+  background: var(--white);
+  padding: 2.5rem;
+  border-radius: var(--radius);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+}
+
+.president-card img {
+  width: 200px;
+  height: 80%;
+  border-radius: 255%;
+}
