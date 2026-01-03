@@ -25,7 +25,7 @@
 .hero-actions .btn {
   box-shadow: 0 8px 25px rgba(0,0,0,0.15);
 }
-.hero-actions .btn::hover {
+.hero-actions .btn:hover {
   cursor: pointer;
 }
 
@@ -374,7 +374,7 @@
 }
 
 .president-card img {
-  width: 200px;
-  height: 80%;
-  border-radius: 255%;
+  width: auto;
+  height: 200px;
+  border-radius: 55%;
 }
