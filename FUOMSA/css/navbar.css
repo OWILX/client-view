@@ -29,8 +29,19 @@
 }
 
 .logo img {
-  height: 40px;
-  width: auto;
+    height: 52px;
+    width: 52px;
+    
+    border-radius: 50%;
+    border: 2.5px solid #ffffff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    background: white;
+    object-fit: contain;
+    
+    transition: transform 0.2s ease;
+}
+.logo img:hover {
+    transform: scale(1.06);
 }
 
 /* Desktop Navigation */
@@ -47,6 +58,34 @@
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+/* Button Enhancements */
+.nav-links ul li .btn {
+  padding: 0.8rem 1.8rem;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.nav-links ul li .btn-primary {
+  background: var(--gold);
+  color: var(--green-dark);
+}
+
+.nav-links ul li .btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.nav-links ul li .btn-outline {
+  border: 2px solid var(--white);
+  color: var(--white);
+}
+
+.nav-links ul li .btn-outline:hover {
+  background: var(--white);
+  color: var(--green-dark);
 }
 
 .nav-links a {

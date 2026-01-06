@@ -1,0 +1,27 @@
+@import "main.css";
+@import "navbar.css";
+@import "footer.css";
+.blog-post-layout {
+  grid-template-columns: 3fr 1fr;
+}
+
+.blog-post h1 {
+  margin-bottom: 0.5rem;
+}
+
+.post-meta {
+  color: #777;
+  font-size: 0.85rem;
+  margin-bottom: 1.5rem;
+}
+
+.blog-post img {
+  width: 100%;
+  border-radius: var(--radius);
+  margin: 1.5rem 0;
+}
+
+.blog-post h2 {
+  margin-top: 2rem;
+  color: var(--green);
+}
