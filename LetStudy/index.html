@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LetStudy • Study to show thyself</title>
+  <meta name="description" content="Creative, interactive university quizzes. Master your courses with LetStudy.">
+
+  <!-- Preload critical resources -->
+  <link rel="preload" href="assets/css/variables.css" as="style">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" as="style">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-EV1u1fV4z6s4fB1z1a1f1n9bG9f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Styles -->
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="assets/css/variables.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/main.css">
+
+  <!-- Favicon -->
+  <link rel="icon" href="assets/images/favicon.ico">
+</head>
+<body>
+
+  <!-- Navbar -->
+<header class="navbar">
+  <div class="container navbar-content">
+    <!-- Logo Area -->
+    <a href="#" class="logo-link">
+      <div class="logo">
+        <img src="assets/images/logos/logo.png" alt="LetStudy Logo"/>
+        <div class="logo-text">
+          <h1>LetStudy</h1>
+          <span class="tagline">Study to show thyself</span>
+        </div>
+      </div>
+    </a>
+
+    <!-- Mobile Menu Toggle -->
+    <button class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <!-- Navigation Links -->
+    <nav class="nav-links" id="nav-links">
+      <a href="#features">Features</a>
+      <a href="#how">How It Works</a>
+      <a href="#testimonials">Reviews</a>
+      <button class="btn btn-primary">Get started</button>
+    </nav>
+  </div>
+</header>
+
+  <!-- Hero Section -->
+  <section id="hero" class="py-8 text-center">
+  <div class="container">
+    <h1 class="hero-title" data-aos="fade-down" data-aos-duration="1000">Ace Your University Exams<br>with Creative Quizzes</h1>
+    
+    <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
+      Personalized, interactive quizzes tailored to your courses.<br>Study not just harder, but smarter.
+    </p>
+
+    <div class="hero-cta" data-aos="zoom-in" data-aos-delay="600" data-aos-duration="800">
+      <button class="btn btn-primary">Register @ LetStudy Now</button>
+      <button class="btn btn-accent">Join Waitlist</button>
+    </div>
+
+    <img src="assets/images/hero.jpg" 
+         alt="LetStudy app on phone" 
+         loading="lazy" 
+         class="hero-image" 
+         id="hero-mockup"
+         data-aos="fade-up" 
+         data-aos-delay="900" 
+         data-aos-duration="1200">
+  </div>
+</section>
+
+  <!-- Features Section -->
+<section id="features" class="py-8 text-center" style="background: var(--bg-secondary);">
+  <div class="container">
+    <h2 class="section-title" data-aos="fade-up">Powerful Features to Help You Succeed</h2>
+    <p class="section-subtitle" data-aos="fade-up" data-aos-delay="200">
+      Everything you need to study effectively and enjoyably.
+    </p>
+
+    <div class="grid features-grid">
+      <!-- Feature 1 -->
+      <div class="card feature-card" data-aos="fade-up" data-aos-delay="100">
+        <img src="assets/icons/personalized.svg" alt="Personalized Quizzes" class="feature-icon">
+        <h3>Personalized Quizzes</h3>
+        <p>AI-tailored questions based on your university courses and weak areas.</p>
+      </div>
+
+      <!-- Feature 2 -->
+      <div class="card feature-card" data-aos="fade-up" data-aos-delay="300">
+        <img src="assets/icons/progress.svg" alt="Progress Tracking" class="feature-icon">
+        <h3> Progress Tracking</h3>
+        <p>Visual dashboards to monitor your improvement and mastery over time.</p>
+      </div>
+
+      <!-- Feature 3 -->
+      <div class="card feature-card" data-aos="fade-up" data-aos-delay="500">
+        <img src="assets/icons/multiplayer.svg" alt="Multiplayer Challenges" class="feature-icon">
+        <h3>Multiplayer Challenges</h3>
+        <p>Compete with friends or classmates in real-time quiz battles.</p>
+      </div>
+
+      <!-- Feature 4 -->
+      <div class="card feature-card" data-aos="fade-up" data-aos-delay="700">
+        <img src="assets/icons/offline.svg" alt="Offline Mode" class="feature-icon">
+        <h3>Offline Mode</h3>
+        <p>Download quizzes and study anywhere, even without internet.</p>
+      </div>
+
+      <!-- Feature 5 -->
+      <div class="card feature-card" data-aos="fade-up" data-aos-delay="900">
+        <img src="assets/icons/timer.svg" alt="Timed Practice" class="feature-icon">
+        <h3>Timed Practice</h3>
+        <p>Simulate exam conditions with customizable timers.</p>
+      </div>
+
+      <!-- Feature 6 -->
+      <div class="card feature-card" data-aos="fade-up" data-aos-delay="1100">
+        <img src="assets/icons/community.svg" alt="Community Leaderboards" class="feature-icon">
+        <h3>Community Leaderboards</h3>
+        <p>See how you rank among students from your university.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- How It Works Section -->
+<section id="how" class="py-8 text-center">
+  <div class="container">
+    <h2 class="section-title" data-aos="fade-up">How LetStudy Works</h2>
+    <p class="section-subtitle" data-aos="fade-up" data-aos-delay="200">
+      Get started in minutes and transform your study routine.
+    </p>
+
+    <div class="timeline">
+      <!-- Step 1 -->
+      <div class="timeline-item" data-aos="fade-right" data-aos-delay="100">
+        <div class="timeline-icon">
+          <img src="assets/icons/signup.svg" alt="Sign Up">
+        </div>
+        <div class="timeline-content">
+          <h3>1. Sign Up Free</h3>
+          <p>Create your account in seconds – no credit card needed.</p>
+          <img src="assets/images/step1-mockup.webp" alt="Sign up screen" loading="lazy" class="step-image">
+        </div>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="timeline-item reverse" data-aos="fade-left" data-aos-delay="300">
+        <div class="timeline-icon">
+          <img src="assets/icons/course.svg" alt="Select Course">
+        </div>
+        <div class="timeline-content">
+          <h3>2. Choose Your Courses</h3>
+          <p>Select your university and subjects for tailored quizzes.</p>
+          <img src="assets/images/step2-mockup.webp" alt="Course selection" loading="lazy" class="step-image">
+        </div>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="timeline-item" data-aos="fade-right" data-aos-delay="500">
+        <div class="timeline-icon">
+          <img src="assets/icons/quiz.svg" alt="Start Quizzing">
+        </div>
+        <div class="timeline-content">
+          <h3>3. Start Quizzing</h3>
+          <p>Dive into fun, adaptive quizzes anytime, anywhere.</p>
+          <img src="assets/images/step3-mockup.webp" alt="Quiz interface" loading="lazy" class="step-image">
+        </div>
+      </div>
+
+      <!-- Step 4 -->
+      <div class="timeline-item reverse" data-aos="fade-left" data-aos-delay="700">
+        <div class="timeline-icon">
+          <img src="assets/icons/progress.svg" alt="Track Progress">
+        </div>
+        <div class="timeline-content">
+          <h3>4. Track Your Progress</h3>
+          <p>See detailed insights and watch your scores improve.</p>
+          <img src="assets/images/step4-mockup.webp" alt="Progress dashboard" loading="lazy" class="step-image">
+        </div>
+      </div>
+
+      <!-- Step 5 -->
+      <div class="timeline-item" data-aos="fade-right" data-aos-delay="900">
+        <div class="timeline-icon">
+          <img src="assets/icons/ace.svg" alt="Ace Exams">
+        </div>
+        <div class="timeline-content">
+          <h3>5. Ace Your Exams</h3>
+          <p>Walk into tests confident and prepared!</p>
+          <img src="assets/images/step5-mockup.webp" alt="Success celebration" loading="lazy" class="step-image">
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-cta" style="margin-top: 4rem;" data-aos="zoom-in" data-aos-delay="1100">
+      <button class="btn btn-primary">Get Started Now</button>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials Section -->
+<section id="testimonials" class="py-8 text-center" style="background: var(--bg-secondary);">
+  <div class="container">
+    <h2 class="section-title" data-aos="fade-up">What Students Are Saying</h2>
+    <p class="section-subtitle" data-aos="fade-up" data-aos-delay="200">
+      Join thousands of university students who improved their grades with LetStudy.
+    </p>
+
+    <div class="testimonial-carousel" id="testimonial-carousel">
+      <!-- Testimonial 1 -->
+      <div class="testimonial-slide active">
+        <img src="assets/images/avatar1.webp" alt="Sarah K." class="testimonial-avatar">
+        <div class="stars">★★★★★</div>
+        <blockquote>"LetStudy turned studying from a chore into something fun. My GPA went up 0.8 points this semester!"</blockquote>
+        <cite><strong>Sarah K.</strong> – Computer Science, Stanford</cite>
+      </div>
+
+      <!-- Testimonial 2 -->
+      <div class="testimonial-slide">
+        <img src="assets/images/avatar2.webp" alt="Marcus T." class="testimonial-avatar">
+        <div class="stars">★★★★★</div>
+        <blockquote>"The multiplayer quizzes with friends kept me motivated. Best study app I've used!"</blockquote>
+        <cite><strong>Marcus T.</strong> – Engineering, MIT</cite>
+      </div>
+
+      <!-- Testimonial 3 -->
+      <div class="testimonial-slide">
+        <img src="assets/images/avatar3.webp" alt="Aisha R." class="testimonial-avatar">
+        <div class="stars">★★★★★</div>
+        <blockquote>"Offline mode saved me during long commutes. Personalized quizzes are spot-on for my courses."</blockquote>
+        <cite><strong>Aisha R.</strong> – Biology, Harvard</cite>
+      </div>
+
+      <!-- Testimonial 4 -->
+      <div class="testimonial-slide">
+        <img src="assets/images/avatar4.webp" alt="Liam Chen" class="testimonial-avatar">
+        <div class="stars">★★★★★</div>
+        <blockquote>"Progress tracking helped me identify weak spots. Aced my finals thanks to LetStudy!"</blockquote>
+        <cite><strong>Liam Chen</strong> – Business, NYU</cite>
+      </div>
+
+      <!-- Add more as needed -->
+    </div>
+
+    <!-- Dots Navigation -->
+    <div class="carousel-dots" id="carousel-dots"></div>
+  </div>
+</section>
+<!-- Pricing Section -->
+<section id="pricing" class="py-8 text-center">
+  <div class="container">
+    <h2 class="section-title" data-aos="fade-up">Simple, Transparent Pricing</h2>
+    <p class="section-subtitle" data-aos="fade-up" data-aos-delay="200">
+      Choose the plan that fits your study needs. Upgrade anytime.
+    </p>
+
+    <div class="grid pricing-grid">
+      <!-- Free Tier -->
+      <div class="card pricing-card" data-aos="zoom-in" data-aos-delay="100">
+        <h3>Free</h3>
+        <div class="price">$0<span>/forever</span></div>
+        <ul class="features-list">
+          <li>✓ Up to 50 quizzes per month</li>
+          <li>✓ Basic progress tracking</li>
+          <li>✓ Community leaderboards</li>
+          <li>✓ Timed practice mode</li>
+          <li>✗ Limited offline access</li>
+          <li>✗ Ads supported</li>
+        </ul>
+        <button class="btn btn-primary">Start Free</button>
+      </div>
+
+      <!-- Premium Tier (Highlighted) -->
+      <div class="card pricing-card popular" data-aos="zoom-in" data-aos-delay="300">
+        <div class="popular-badge">Most Popular</div>
+        <h3>Premium</h3>
+        <div class="price">$4.99<span>/month</span></div>
+        <ul class="features-list">
+          <li>✓ Unlimited quizzes</li>
+          <li>✓ Advanced analytics & insights</li>
+          <li>✓ Full offline mode</li>
+          <li>✓ Ad-free experience</li>
+          <li>✓ Multiplayer challenges</li>
+          <li>✓ Priority support</li>
+          <li>✓ Exclusive premium content</li>
+        </ul>
+        <button class="btn btn-accent">Go Premium</button>
+      </div>
+    </div>
+
+    <p class="pricing-note" data-aos="fade-up" data-aos-delay="500">
+      Billed monthly • Cancel anytime • 7-day free trial for Premium
+    </p>
+  </div>
+</section>
+<!-- Final CTA Section -->
+<section id="final-cta" class="py-8 text-center">
+  <div class="container">
+    <h2 class="final-title" data-aos="fade-up">Ready to Study to Show Thyself?</h2>
+    <p class="final-subtitle" data-aos="fade-up" data-aos-delay="200">
+      Join thousands of students mastering their courses with LetStudy today.
+    </p>
+
+    <div class="final-cta-buttons" data-aos="zoom-in" data-aos-delay="400">
+      <button class="btn btn-primary btn-large">Start Free Forever</button>
+      <button class="btn btn-accent btn-large">Go Premium Now</button>
+    </div>
+
+    <img src="assets/images/final-mockup.webp" 
+         alt="LetStudy success celebration on phone" 
+         loading="lazy" 
+         class="final-image" 
+         data-aos="fade-up" 
+         data-aos-delay="600">
+  </div>
+</section>
+
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container footer-content">
+    <!-- Logo & Tagline -->
+    <div class="footer-logo">
+      <a href="#" class="logo-link">
+        <!-- Reuse the same SVG logo from navbar -->
+        <img src="assets/images/logos/logo.png" style="width:40px;height:40px; border-radius:50%; transform:scale(1.5);" alt="LetStudy Logo"/>
+        <div class="logo-text">
+          <h3>LetStudy</h3>
+          <span class="tagline">Study to show thyself</span>
+        </div>
+      </a>
+      <p class="footer-desc">Master your university courses with fun, personalized quizzes.</p>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#how">How It Works</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#testimonials">Reviews</a></li>
+      </ul>
+    </div>
+
+    <!-- Legal -->
+    <div class="footer-links">
+      <h4>Legal</h4>
+      <ul>
+        <li><a href="/privacy.html">Privacy Policy</a></li>
+        <li><a href="/terms.html">Terms of Service</a></li>
+        <li><a href="/contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact & Social -->
+<div class="footer-contact">
+  <h4>Contact Us</h4>
+  <ul class="contact-list">
+    <li>
+      <a href="mailto:hello@letstudy.app">
+        <i class="fas fa-envelope"></i> hello@letstudy.app
+      </a>
+    </li>
+    <li>
+      <a href="tel:+1234567890">
+        <i class="fas fa-phone"></i> +234 907 676 7452
+      </a>
+    </li>
+    <li>
+      <a href="https://wa.me/+2349076767452" target="_blank">
+        <i class="fab fa-whatsapp"></i> WhatsApp: +234 907 676 7452
+      </a>
+    </li>
+  </ul>
+
+  <h4 style="margin-top: 2rem;">Follow Us</h4>
+  <div class="social-icons">
+    <a href="https://facebook.com/letstudy" aria-label="Facebook" target="_blank">
+      <i class="fab fa-facebook-f"></i>
+    </a>
+    <a href="https://x.com/letstudy" aria-label="X (Twitter)" target="_blank">
+      <i class="fab fa-x-twitter"></i>
+    </a>
+    <a href="https://instagram.com/letstudy" aria-label="Instagram" target="_blank">
+      <i class="fab fa-instagram"></i>
+    </a>
+    <a href="https://tiktok.com/@letstudy" aria-label="TikTok" target="_blank">
+      <i class="fab fa-tiktok"></i>
+    </a>
+  </div>
+</div>
+
+  <!-- Copyright -->
+  <div class="footer-bottom">
+    <div class="container">
+      <p>&copy; 2026 LetStudy. Powered by OWILXAI. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+  <!-- Scripts (deferred) -->
+  <script defer src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+
+  <script defer src="assets/js/animations.js"></script>
+  <script defer src="assets/js/main.js"></script>
+  <button class="back-to-top" aria-label="Back to top">
+  <i class="fas fa-arrow-up"></i>
+</button>
+</body>
+</html>
