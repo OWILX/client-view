@@ -44,7 +44,7 @@
 </header>
 
 <section class="hero">
-  <div class="container hero-content">
+  <div class="container animate-hero hero-content">
     <span class="hero-badge">FUOYE Medical Students</span>
 
     <h1>
@@ -67,31 +67,40 @@
 <section class="section">
   <div class="container">
 
-    <a href="presidents-remark.html" class="president-feature">
+    <div class="president-feature-split">
 
-      <img src="assets/images/president.jpg" alt="FUOMSA President">
-
-      <div class="president-overlay">
-        <span class="president-tag">Message from the President</span>
-
-        <h2>Comrade John Doe</h2>
-        <p>
-          Leading FUOMSA with a commitment to collaboration,
-          innovation, and research in healthcare delivery.
-        </p>
-
-        <span class="president-cta">
-          Read Full Remark →
-        </span>
+      <!-- Image -->
+      <div class="president-image animate animate-left">
+        <img src="assets/images/president.jpg" alt="FUOMSA President">
       </div>
 
-    </a>
+      <!-- Text -->
+      <div class="president-content animate animate-right">
+        <span class="feature-tag">President’s Address</span>
+
+        <h2>Comrade John Doe</h2>
+        <p class="role">President, FUOMSA</p>
+
+        <p>
+          FUOMSA remains committed to promoting healthcare delivery through
+          collaboration, innovation, and research. Under the current
+          administration, we strive to strengthen academic excellence,
+          leadership, and service.
+        </p>
+
+        <a href="presidents-remark.html" class="btn btn-primary">
+          Read Full Remark
+        </a>
+      </div>
+
+    </div>
 
   </div>
 </section>
 
 
-<section class="section">
+
+<section class="section animate">
   <div class="container grid grid-2 align-center">
     <div>
       <h2 class="section-title">Who We Are</h2>
@@ -114,24 +123,22 @@
   </div>
 </section>
 
-
-
 <section class="section section-light">
   <div class="container">
     <h2 class="section-title center">What We Do</h2>
 
     <div class="grid grid-3">
-      <div class="card">
+      <div class="card animate">
         <h3>Academic Support</h3>
         <p>Providing academic resources, mentorship, and peer support.</p>
       </div>
 
-      <div class="card">
+      <div class="card animate">
         <h3>Research & Innovation</h3>
         <p>Encouraging student-led research and medical innovation.</p>
       </div>
 
-      <div class="card">
+      <div class="card animate">
         <h3>Health Outreach</h3>
         <p>Community health programs and awareness campaigns.</p>
       </div>
@@ -139,7 +146,7 @@
   </div>
 </section>
 
-<section class="section">
+<section class="section animate animate-up">
   <div class="container">
     <div class="section-header">
       <h2 class="section-title">Upcoming Events</h2>
@@ -177,7 +184,7 @@
 
     <div class="grid grid-3">
       <!-- Blog Card -->
-      <article class="blog-card">
+      <article class="blog-card animate animate-left">
         <img src="assets/images/blog1.webp" alt="Health Tip">
         <div class="blog-content">
           <span class="blog-tag">Health Tips</span>
@@ -187,7 +194,7 @@
         </div>
       </article>
 
-      <article class="blog-card">
+      <article class="blog-card animate animate-left">
         <img src="assets/images/blog2.jpg" alt="Medical Education">
         <div class="blog-content">
           <span class="blog-tag">Medical Education</span>
@@ -198,7 +205,7 @@
       </article>
 
       <!-- Ad Slot -->
-      <div class="ad-card">
+      <div class="ad-card animate animate-right">
         <span class="ad-label">Sponsored</span>
         <p>Your Ad Here</p>
         <small>Medical brands · NGOs · Exam prep</small>
@@ -208,6 +215,63 @@
 </section>
 
 <section class="section section-light">
+  <div class="container">
+
+    <div class="home-news">
+
+      <!-- Left -->
+      <div class="home-news-intro animate animate-left">
+        <span class="section-tag">News & Updates</span>
+        <h2>Latest Announcements</h2>
+        <p>
+          Stay informed with official announcements and important updates
+          from the Federal University Oye-Ekiti Medical Students’ Association.
+        </p>
+
+        <a href="news.html" class="btn btn-outline">
+          View All News
+        </a>
+      </div>
+
+      <!-- Right -->
+      <div class="home-news-list animate animate-right">
+
+        <article class="news-preview-item">
+          <span class="news-date">12 Aug 2025</span>
+          <h3>
+            <a href="news/general-assembly.html">
+              FUOMSA Holds First General Assembly of the Session
+            </a>
+          </h3>
+        </article>
+
+        <article class="news-preview-item">
+          <span class="news-date">05 Aug 2025</span>
+          <h3>
+            <a href="news/medical-outreach.html">
+              Medical Outreach Program Announced
+            </a>
+          </h3>
+        </article>
+
+        <article class="news-preview-item">
+          <span class="news-date">30 Jul 2025</span>
+          <h3>
+            <a href="news/exam-guidelines.html">
+              Guidelines for Upcoming Examinations Released
+            </a>
+          </h3>
+        </article>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<section class="section section-light animate animate-up">
   <div class="container grid grid-2 align-center">
     <div>
       <h2 class="section-title">Research & Innovation</h2>
@@ -218,7 +282,7 @@
       <a href="research.html" class="btn btn-primary">Explore Research</a>
     </div>
 
-    <div class="stat-box">
+    <div class="stat-box animate-scale">
       <div class="stat">
         <h3>20+</h3>
         <p>Research Projects</p>
@@ -232,7 +296,7 @@
 </section>
 
 
-<section class="section partners-section">
+<section class="section partners-section animate">
   <div class="container">
     <h2 class="section-title">Our Partners</h2>
     <p class="section-subtitle">
@@ -259,8 +323,7 @@
   </div>
 </section>
 
-
-<footer class="footer">
+<footer class="footer animate">
   <div class="container footer-grid">
 
     <!-- About -->
@@ -318,6 +381,6 @@
     </p>
   </div>
 </footer>
-
+<script src="js/main.js"></script>
 </body>
 </html>
