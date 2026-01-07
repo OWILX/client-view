@@ -73,7 +73,9 @@ img {
 .animate-up {
   transform: translateY(80px);
 }
-
+.animate-down {
+  transform: translateY(-80px);
+}
 /* Active state */
 .animate.show {
   opacity: 1;
@@ -92,4 +94,15 @@ img {
 .animate-hero.show {
   opacity: 1;
   transform: translateY(0) scale(1);
+}
+
+@media (hover: none) {
+  .btn:active {
+    transform: scale(0.97);
+  }
+}
+a:focus,
+button:focus {
+  outline: 2px dashed var(--green);
+  outline-offset: 4px;
 }

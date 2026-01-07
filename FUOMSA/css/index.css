@@ -34,15 +34,12 @@
 }
 .hero-actions .btn {
   box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-}
-.hero-actions .btn:hover {
   cursor: pointer;
 }
-
 .hero-content {
   max-width: 700px;
   padding: 2rem 2rem;
-  animation: fadeHero 1.2s ease forwards;
+  animation: fadeHero 1.2s cubic-bezier(0.175, 0.885, 0.32, 1.475) forwards;
 }
 
 .hero-badge {
@@ -183,7 +180,7 @@
   inset: 0;
   background: linear-gradient(120deg, rgba(0,128,0,0.1), transparent);
   opacity: 0;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.9s cubic-bezier(0.175, 0.885, 0.32, 1.475);
 }
 
 .stat:hover::before {
@@ -234,7 +231,7 @@
   align-items: center;
   justify-content: center;
   position: relative;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.9s cubic-bezier(0.175, 0.885, 0.32, 1.475), box-shadow 0.9s cubic-bezier(0.175, 0.885, 0.32, 1.475);
 }
 
 .partner-card img {
@@ -242,7 +239,7 @@
   max-height: 70px;
   object-fit: contain;
   opacity: 0.8;
-  transition: filter 0.3s ease, opacity 0.3s ease;
+  transition: filter 0.9s cubic-bezier(0.175, 0.885, 0.32, 1.475), opacity 0.9s cubic-bezier(0.175, 0.885, 0.32, 1.475);
 }
 
 /* Hover Effects */
@@ -252,8 +249,9 @@
 }
 
 .partner-card:hover img {
-  filter: grayscale(0%);
-  opacity: 1;
+  filter: grayscale(50%);
+  opacity: 0.8;
+  transform: scale(1.09);
 }
 .partner-card::after {
   content: "";
@@ -295,7 +293,7 @@
   inset: 0;
   background: linear-gradient(120deg, rgba(0,128,0,0.08), transparent);
   opacity: 0;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.9s cubic-bezier(0.175, 0.885, 0.32, 1.475);
 }
 
 .card:hover::before {
@@ -306,18 +304,7 @@
   color: var(--green);
 }
 .event-card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.event-card::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  height: 3px;
-  width: 0;
-  background: var(--gold);
-  transition: width 0.3s ease;
+  transition: transform 0.9s cubic-bezier(0.175, 0.885, 0.32, 1.475), box-shadow 0.9s cubic-bezier(0.175, 0.885, 0.32, 1.475);
 }
 
 .event-card:hover {
@@ -334,18 +321,12 @@
   overflow: hidden;
   box-shadow: 0 10px 30px rgba(0,0,0,0.05);
   transition: var(--transition);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.9s cubic-bezier(0.175, 0.885, 0.32, 1.475), box-shadow 0.9s cubic-bezier(0.175, 0.885, 0.32, 1.475);
 }
 
 .blog-card:hover {
   transform: translateY(-6px);
   box-shadow: 0 16px 40px rgba(0,0,0,0.1);
-}
-
-.blog-card img {
-  height: 180px;
-  width: 100%;
-  object-fit: cover;
 }
 
 .blog-content {
@@ -362,12 +343,13 @@
   margin-bottom: 0.5rem;
 }
 .blog-card img {
-  transition: transform 0.4s ease;
+  transition: transform 0.9s cubic-bezier(0.175, 0.885, 0.32, 1.475);
 }
 
 .blog-card:hover img {
-  transform: scale(1.05);
+  transform: scale(1.08);
 }
+
 .president-feature-split {
   display: grid;
   grid-template-columns: 1fr 1.3fr;
@@ -499,7 +481,7 @@
 
 /* Animations per page */
 .navbar {
-  animation: navDrop 0.8s ease-out forwards;
+  animation: navDrop 0.9s cubic-bezier(0.175, 0.885, 0.32, 1.475) forwards;
 }
 
 @keyframes navDrop {
@@ -515,13 +497,17 @@
 
 .card:nth-child(1) { transition-delay: 0.1s; }
 .card:nth-child(2) { transition-delay: 0.2s; }
-.card:nth-child(3) { transition-delay: 0.3s; }
+.card:nth-child(3) { transition-delay: 0.4s; }
+
+.event-card:nth-child(1) { transition-delay: 0.1s; }
+.event-card:nth-child(2) { transition-delay: 0.2s; }
+.event-card:nth-child(3) { transition-delay: 0.4s; }
 
 
 .animate-scale {
   opacity: 0;
   transform: translateY(60px) scale(0.9);
-  transition: all 0.9s ease-out;
+  transition: all 0.9s cubic-bezier(0.175, 0.885, 0.32, 1.475);
 }
 
 .animate-scale.show {
@@ -536,4 +522,64 @@
     transform: none;
     opacity: 1;
   }
+}
+
+.card,
+.event-card,
+.blog-card,
+.news-preview-item,
+.president-feature-split {
+  transition:
+    transform 0.9s cubic-bezier(0.175, 0.885, 0.32, 1.475),
+    box-shadow 0.9s cubic-bezier(0.175, 0.885, 0.32, 1.475);
+}
+
+.card:hover,
+.event-card:hover,
+.blog-card:hover,
+.news-preview-item:hover,
+.president-feature-split:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 45px rgba(0,0,0,0.15);
+}
+
+
+
+.president-feature-split:hover .president-image img {
+  transform: scale(1.04);
+}
+
+.president-image img {
+  transition: transform 0.9s cubic-bezier(0.175, 0.885, 0.32, 1.475);
+}
+
+.news-preview-item h3 a {
+  position: relative;
+}
+
+.news-preview-item h3 a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0;
+  height: 2px;
+  background: var(--green);
+  transition: width 0.9s cubic-bezier(0.175, 0.885, 0.32, 1.475);
+}
+
+.news-preview-item h3 a:hover::after {
+  width: 100%;
+}
+
+.partner-logo img {
+  opacity: 0.75;
+  transition:
+    opacity 0.9s cubic-bezier(0.175, 0.885, 0.32, 1.475),
+    transform 0.9s cubic-bezier(0.175, 0.885, 0.32, 1.475);
+}
+
+.partner-logo img:hover {
+  opacity: 1;
+  transform: scale(1.05);
 }
