@@ -3,8 +3,7 @@
   background: var(--white);
   padding: 2.5rem;
   border-radius: var(--radius);
-  box-shadow: 0 12px 30px rgba(0,0,0,0.06);
-  transition: var(--transition);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.5);
 }
 
 .event-box:hover {
