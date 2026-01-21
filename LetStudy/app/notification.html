@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="theme-color" content="#2DD4BF">
+    <title>LetStudy Notifications</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="assets/css/notification.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="notifications-body">
+    <header class="app-header">
+        <div class="header-left">
+            <img src="assets/images/logo2.png" alt="LetStudy Logo" class="app-logo" width="40" height="40">
+        </div>
+        <h1 class="header-title">Notifications</h1>
+        <div class="header-right">
+            <button class="icon-btn" aria-label="Settings" onclick="window.location.href='settings.html';">
+                <i class="fas fa-cog" style="transform: scale(1.6);"></i>
+            </button>
+        </div>
+    </header>
+
+    <div class="content-wrapper">
+        <main class="notifications-main">
+            <div class="notifications-actions">
+                <button class="secondary-btn" id="mark-all-read">Mark all as read</button>
+            </div>
+
+            <ul class="notifications-list" aria-labelledby="notifications-title">
+                <!-- Skeleton states -->
+                <li class="notification-item skeleton" aria-hidden="true"></li>
+                <li class="notification-item skeleton" aria-hidden="true"></li>
+                <li class="notification-item skeleton" aria-hidden="true"></li>
+                <!-- Real content (hidden initially) -->
+                <li class="notification-item real-content hidden" data-id="1">
+                    <i class="fas fa-info-circle notification-icon" style="transform: scale(1.6);"></i>
+                    <div class="notification-content">
+                        <p class="notification-desc">New quiz available in Mathematics!</p>
+                    </div>
+                    <button class="close-btn" aria-label="Dismiss notification">
+                        <i class="fas fa-times" style="transform: scale(1.6);"></i>
+                    </button>
+                </li>
+                <li class="notification-item real-content hidden" data-id="2">
+                    <i class="fas fa-trophy notification-icon" style="transform: scale(1.6);"></i>
+                    <div class="notification-content">
+                        <p class="notification-desc">You achieved a new high score in Science.</p>
+                    </div>
+                    <button class="close-btn" aria-label="Dismiss notification">
+                        <i class="fas fa-times" style="transform: scale(1.6);"></i>
+                    </button>
+                </li>
+                <li class="notification-item real-content hidden" data-id="3">
+                    <i class="fas fa-calendar-check notification-icon"></i>
+                    <div class="notification-content">
+                        <p class="notification-desc">Your streak is now 5 days! Keep going!</p>
+                    </div>
+                    <button class="close-btn" aria-label="Dismiss notification">
+                        <i class="fas fa-times" style="transform: scale(1.6);"></i>
+                    </button>
+                </li>
+            </ul>
+        </main>
+    </div>
+
+    <footer class="bottom-nav">
+        <div class="sidebar-header">
+            <button class="sidebar-toggle" aria-label="Toggle sidebar" aria-expanded="true" aria-controls="sidebar-nav">
+                <i class="fas fa-chevron-left" style="transform: scale(1.6);"></i>
+            </button>
+        </div>
+        <nav class="nav-bar" id="sidebar-nav" aria-label="Main navigation">
+            <a href="dashboard.html" class="nav-item">
+                <i class="fas fa-home" style="transform: scale(1.6);"></i>
+                <span>Home</span>
+            </a>
+            <a href="quiz.html" class="nav-item">
+                <i class="fas fa-question-circle" style="transform: scale(1.6);"></i>
+                <span>Quizzes</span>
+            </a>
+            <a href="#" class="nav-item">
+                <i class="fas fa-gamepad" style="transform: scale(1.6);"></i>
+                <span>Games</span>
+            </a>
+            <a href="#" class="nav-item">
+                <i class="fas fa-trophy" style="transform: scale(1.6);"></i>
+                <span>Leaderboard</span>
+            </a>
+            <a href="progress.html" class="nav-item">
+                <i class="fas fa-user" style="transform: scale(1.6);"></i>
+                <span>Profile</span>
+            </a>
+        </nav>
+    </footer>
+
+    
+    <script src="assets/js/notification.js"></script>
+</body>
+</html>
