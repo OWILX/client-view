@@ -1,4 +1,5 @@
 // assets/js/dashboard.js
+import { getSessionValue } from './sessionService.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     // 1. Device Detection & Body setup
@@ -18,7 +19,8 @@ document.addEventListener('DOMContentLoaded', () => {
     document.documentElement.style.setProperty('--shadow-default', isIOS ? 'var(--shadow-soft)' : 'var(--shadow-material)');
 
     // 2. Auth & Data Parsing
-    const userData = localStorage.getItem('letstudy_user');
+    const userData = await getSessionValue('user');
+    console.log(userData);
     if (!userData) {
         window.location.href = 'login.html';
         return;
