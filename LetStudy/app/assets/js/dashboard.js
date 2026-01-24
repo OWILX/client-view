@@ -21,6 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // 2. Auth & Data Parsing
     const userData = await getSessionValue('user');
     console.log(userData);
+    console.log("userData");
     if (!userData) {
         //window.location.href = 'login.html';
         //return;
