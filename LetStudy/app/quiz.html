@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="theme-color" content="#2DD4BF">
+    <title>LetStudy Quiz</title>
+     <link rel="stylesheet" href="assets/css/quiz.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="quiz-body">
+    <header class="app-header">
+        <div class="header-left">
+            <img src="assets/images/logo2.png" alt="LetStudy Logo" class="app-logo" width="40" height="40">
+        </div>
+        <h1 class="header-title">Quiz Setup</h1>
+        <div class="header-right">
+            <button class="icon-btn" aria-label="Notifications" onclick="window.location.href='notifications.html';">
+                <i class="fas fa-bell"></i>
+                <span class="badge-dot"></span>
+            </button>
+            <button class="icon-btn" aria-label="Settings" onclick="window.location.href='settings.html';">
+                <i class="fas fa-cog"></i>
+            </button>
+        </div>
+    </header>
+
+    <div class="content-wrapper">
+        <main class="quiz-main">
+            <!-- Setup Steps -->
+            <section id="quiz-setup" class="quiz-section">
+                <!-- Step 1: Quiz Type -->
+                <div id="step-quiz-type" class="setup-step">
+                    <h2 class="section-title">Select Quiz Type</h2>
+                    <div class="quiz-type-cards">
+                        <div class="selection-card" data-value="cloze">
+                            <i class="fas fa-pencil-alt card-icon"></i>
+                            <span>Cloze Test</span>
+                        </div>
+                        <div class="selection-card" data-value="mcq">
+                            <i class="fas fa-list-ul card-icon"></i>
+                            <span>Multiple Choice (MCQ)</span>
+                        </div>
+                        <div class="selection-card" data-value="tf">
+                            <i class="fas fa-check-double card-icon"></i>
+                            <span>True/False (T/F)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 2: Courses -->
+                <div id="step-courses" class="setup-step hidden">
+                    <h2 class="section-title">Select Courses</h2>
+                    <div class="selection-cards">
+                        <!-- Dynamically populated -->
+                    </div>
+                    <button class="primary-btn" id="next-to-topics" disabled>Next</button>
+                </div>
+
+                <!-- Step 3: Topics -->
+                <div id="step-topics" class="setup-step hidden">
+                    <h2 class="section-title">Select Topics</h2>
+                    <div class="selection-cards">
+                        <!-- Dynamically populated -->
+                    </div>
+                    <button class="primary-btn" id="next-to-subtopics" disabled>Next</button>
+                </div>
+
+                <!-- Step 4: Subtopics -->
+                <div id="step-subtopics" class="setup-step hidden">
+                    <h2 class="section-title">Select Subtopics</h2>
+                    <div class="selection-cards">
+                        <!-- Dynamically populated -->
+                    </div>
+                    <button class="primary-btn" id="next-to-slider" disabled>Next</button>
+                </div>
+
+                <!-- Step 5: Question Count -->
+                <div id="step-slider" class="setup-step hidden">
+                    <h2 class="section-title">Number of Questions</h2>
+                    <div class="slider-container">
+                        <input type="range" id="question-count-slider" min="5" max="50" value="10" step="5">
+                        <span id="question-count-value">10</span>
+                    </div>
+                    <button class="primary-btn" id="start-quiz-btn">Start Quiz</button>
+                </div>
+            </section>
+
+            <!-- Quiz In-Progress Section (hidden initially) -->
+            <section id="quiz-in-progress" class="quiz-section hidden">
+                <div class="quiz-header">
+                    <div class="quiz-timer">
+                        <i class="fas fa-clock"></i>
+                        <span id="timer-display">00:00</span>
+                    </div>
+                    <div class="quiz-progress">
+                        Question <span id="current-question">1</span>/<span id="total-questions">10</span>
+                    </div>
+                </div>
+
+                <div id="question-container" class="question-card">
+                    <!-- Dynamically populated -->
+                </div>
+
+                <div class="quiz-navigation">
+                    <button class="secondary-btn" id="prev-btn" disabled>Previous</button>
+                    <button class="secondary-btn" id="next-btn">Next</button>
+                </div>
+
+                <button class="primary-btn hidden" id="submit-quiz-btn">Submit Quiz</button>
+            </section>
+
+            <!-- Results Section (hidden initially) -->
+            <section id="quiz-results" class="quiz-section hidden">
+                <h2 class="section-title">Quiz Results</h2>
+                <div class="results-summary">
+                    <p>Score: <span id="score-display">0/0</span></p>
+                    <p>Time Taken: <span id="time-taken">00:00</span></p>
+                </div>
+                <button class="primary-btn" id="restart-quiz-btn">Back to Setup</button>
+            </section>
+        </main>
+    </div>
+
+    <footer class="bottom-nav">
+        <div class="sidebar-header">
+            <button class="sidebar-toggle" aria-label="Toggle sidebar" aria-expanded="true" aria-controls="sidebar-nav">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+        </div>
+        <nav class="nav-bar" id="sidebar-nav" aria-label="Main navigation">
+            <a href="dashboard.html" class="nav-item">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+            </a>
+            <a href="quiz.html" class="nav-item active" aria-current="page">
+                <i class="fas fa-question-circle"></i>
+                <span>Quizzes</span>
+            </a>
+            <a href="#" class="nav-item">
+                <i class="fas fa-gamepad"></i>
+                <span>Games</span>
+            </a>
+            <a href="leaderboard.html" class="nav-item">
+                <i class="fas fa-trophy"></i>
+                <span>Leaderboard</span>
+            </a>
+            <a href="progress.html" class="nav-item">
+                <i class="fas fa-user"></i>
+                <span>Profile</span>
+            </a>
+        </nav>
+    </footer>
+
+    
+    <script src="assets/js/quiz.js"></script>
+</body>
+</html>

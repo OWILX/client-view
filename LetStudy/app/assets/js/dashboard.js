@@ -19,9 +19,9 @@ document.addEventListener('DOMContentLoaded', () => {
     document.documentElement.style.setProperty('--shadow-default', isIOS ? 'var(--shadow-soft)' : 'var(--shadow-material)');
 
     // 2. Auth & Data Parsing
-    const userData = await getSessionValue('user');
-    console.log(userData);
-    if (!userData) {
+    const da = await getSessionValue('user');
+    console.log(da);
+    if (!da) {
         window.location.href = 'login.html';
         return;
     }
