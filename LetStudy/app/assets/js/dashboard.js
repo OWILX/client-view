@@ -1,6 +1,13 @@
 // assets/js/dashboard.js
 import { getSessionValue } from './sessionService.js';
 
+    const userData = await getSessionValue('user');
+    console.log(userData);
+    alert("userData");
+    if (!userData) {
+        //window.location.href = 'login.html';
+        //return;
+    }
 document.addEventListener('DOMContentLoaded', () => {
     // 1. Device Detection & Body setup
     const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) || 
@@ -19,11 +26,12 @@ document.addEventListener('DOMContentLoaded', () => {
     document.documentElement.style.setProperty('--shadow-default', isIOS ? 'var(--shadow-soft)' : 'var(--shadow-material)');
 
     // 2. Auth & Data Parsing
-    const da = await getSessionValue('user');
-    console.log(da);
-    if (!da) {
-        window.location.href = 'login.html';
-        return;
+    const userData = await getSessionValue('user');
+    console.log(userData);
+    alert("userData");
+    if (!userData) {
+        //window.location.href = 'login.html';
+        //return;
     }
 
     const parsedData = JSON.parse(userData) || {};
