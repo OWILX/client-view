@@ -9,5 +9,5 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
       window.location.href = 'login.html';
     }
-  }, 2000); // Matches splash duration (1.8s animation + buffer)
+  }, 20000); // Matches splash duration (1.8s animation + buffer)
 });
