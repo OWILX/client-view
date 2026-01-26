@@ -51,7 +51,11 @@
 .login-card {
   width: 100%;
   max-width: 26rem; /* Human reading width */
-  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  background: linear-gradient(
+  135deg,
+  color-mix(in srgb, #2dd4bf 25%, white),
+  color-mix(in srgb, #22b8a8 25%, white)
+);
   border-radius: var(--radius-xl);
   padding: 2.5rem;
   margin: auto;

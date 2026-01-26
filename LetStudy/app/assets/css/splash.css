@@ -4,7 +4,11 @@
 .splash-screen {
   position: fixed;
   inset: 0;
-  background: linear-gradient(135deg, #2dd4bf, #22b8a8);
+  background: linear-gradient(
+  135deg,
+  color-mix(in srgb, #2dd4bf 25%, white),
+  color-mix(in srgb, #22b8a8 25%, white)
+);
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -19,8 +23,8 @@
   50%  { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
-&::before,
-&::after {
+.splash-screen::before,
+.splash-screen::after {
   content: '';
   position: absolute;
   width: 180px;
@@ -31,7 +35,7 @@
   animation: blob 18s infinite;
 }
 
-&::after {
+.splash-screen::after {
   animation-delay: -9s;
   background: rgba(250, 204, 21, 0.16);
 }
@@ -46,11 +50,12 @@
   text-align: center;
   color: white;
   position: relative; 
-  top: -100px; 
+  transform: translateY(-5vh);
 }
 
 .splash-logo {
-  max-width: 100%;
+  max-width: 240px;
+  width: 60vw;
   height: auto;
   display: block;
   margin: 0 auto;
